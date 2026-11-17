@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project | Harry Childs</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- DON'T EDIT: Applies your saved light/dark choice instantly -->
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    } catch (e) {}
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER: logo, back button, light/dark toggle -->
+  <header id="site-header">
+    <div class="container">
+      <div class="nav">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">HC</span>
+          <span class="logo-text">Harry Childs</span>
+        </a>
+        <div class="nav-actions">
+          <!-- DON'T EDIT: the script fills in the right link so you return to the project you came from -->
+          <a class="nav-back js-back" href="index.html#projects">← Back to projects</a>
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle light and dark mode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-wrap">
+    <div class="container">
+
+      <!-- =====================================================
+           HOW THIS PAGE WORKS
+           This one file holds ALL your project pages. Only the one matching the link
+           (e.g. project.html#homelab) is shown. Each block below has data-project="..."
+           which must match the link on the card in index.html.
+
+           HOW TO ADD IMAGES WITH A WRITE-UP
+           Every project has a <div class="showcase"> with one or more <figure class="shot"> blocks.
+           For each picture:
+             1. Put the image in that project's folder (e.g. images/cctv/).
+             2. Change the file name in BOTH href="..." and src="..." (they must match).
+             3. Change the alt text (describes the picture for screen readers).
+             4. Change the <h3> title and write your text inside the <p> tags.
+           To add another picture: copy a whole <figure class="shot"> ... </figure> block and paste it below.
+           To remove a picture: delete its whole <figure> block.
+           If an image file is missing, the picture hides itself and only your text shows.
+           ===================================================== -->
+
+      
+<!-- 1. DEBIAN HOMELAB -->
+<article class="project-page" data-project="homelab" data-title="Debian Homelab Server" hidden>
+  <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / Debian Homelab Server</p>
+
+  <h1>Debian Homelab Server</h1>
+
+  <p class="lead">My interest in building and managing my own homelab started with something relatively simple: upgrading an old computer. I quickly discovered that I really enjoyed the process of taking computers apart, replacing components, building systems from scratch and getting everything working. Over time, I rebuilt my computer several times, experimenting with different hardware configurations and learning more about how computers operate.</p>
+
+  <div class="badges">
+    <span class="badge">Debian</span>
+    <span class="badge">Linux</span>
+    <span class="badge">Docker</span>
+    <span class="badge">Self-Hosting</span>
+    <span class="badge">Networking</span>
+    <span class="badge">Wazuh</span>
+    <span class="badge">Home Assistant</span>
+  </div>
+
+  <div class="project-block">
+    <h2>Overview</h2>
+    <p>This project outlines the setup and management of my Debian home server, hosting multiple self-hosted services through Docker containers, providing a centralised platform for media streaming, network services and security monitoring.</p>
+  </div>
+
+  <div class="project-block">
+    <h2>What I did</h2>
+
+    <p>My interest in building and managing my own homelab started with something relatively simple: upgrading an old computer. I quickly discovered that I really enjoyed the process of taking computers apart, replacing components, building systems from scratch and getting everything working. Over time, I rebuilt my computer several times, experimenting with different hardware configurations and learning more about how computers operate.<br><br>
+
+    As my interest grew, I began experimenting with different operating systems on my old hardware, moving beyond Windows and exploring Linux distributions and server operating systems. This eventually led me to repurpose my old computer into a storage server (NAS). I believe one of my earliest setups used OpenMediaVault, which introduced me to network-attached storage, file sharing and running services independently of a traditional desktop computer. I also began experimenting with media streaming platforms such as Plex and self-hosted music services, allowing me to access my own media across different devices around my home.<br><br>
+
+    After receiving a Raspberry Pi 3 for my birthday, I decided to explore running my homelab on a much smaller and more energy-efficient platform. I installed the necessary software and configured it to operate as my main home server, using an external hard drive for storage.<br><br>
+
+    For a while, this became the central point for my NAS and media streaming services. It was an excellent opportunity to learn about the capabilities of single-board computers, Linux administration, storage management and running services on limited hardware resources.<br><br>
+
+    Eventually, I returned to my original computer and decided to turn it back into a dedicated server. This time, I expanded its storage capacity with additional hard drives and began experimenting with Docker containers to host a wider range of applications.<br><br>
+
+    I introduced several new services, including self-hosted note-taking applications and Wazuh for security monitoring. This was where my homelab started becoming much more than a simple NAS and media server. I was beginning to explore containerisation, system monitoring, cybersecurity and managing multiple services within a single environment.<br><br>
+
+    Throughout this period, I went through numerous hardware and software configurations, constantly experimenting with different operating systems, applications and server setups. Although I cannot remember every individual configuration I used along the way, each iteration taught me something new and helped me understand how to build a more capable and reliable infrastructure.<br><br>
+
+    A significant turning point came when I was generously donated a large amount of computer hardware through a connection I made via a friend. This included hard drives, motherboards, processors, power supplies, a Dell PowerEdge server, older tablets and various other components.<br><br>
+
+    Having access to this equipment gave me the opportunity to experiment with hardware I might not otherwise have been able to afford.<br><br>
+
+    After exploring the available components, I selected an Intel Core i5-6500 processor and compatible motherboard to become the foundation of my next homelab server. This provided a substantial performance improvement over my previous Raspberry Pi 3 and older AMD-based system, giving me considerably more headroom to run multiple services simultaneously.<br><br>
+
+    This hardware became the foundation of the homelab infrastructure I continue to develop today.<br><br>
+
+    Over time, I have continued expanding and refining the environment, eventually establishing a Debian-based home server running multiple self-hosted services through Docker containers.<br><br>
+
+    Some of the services I currently run include:<br><br>
+
+    <strong>Jellyfin:</strong> Self-hosted media streaming, allowing me to organise and stream my own film and television collection across devices.<br><br>
+
+    <strong>Swing Music:</strong> A self-hosted music streaming platform, giving me access to my own personal music library without relying on third-party streaming services.<br><br>
+
+    <strong>Immich:</strong> A self-hosted photo and video management platform. I migrated my personal photo library from Google Photos, allowing me to manage and access my collection locally.<br><br>
+
+    <strong>Home Assistant:</strong> A home automation platform used to integrate smart devices, automate tasks and experiment with building a smarter home.<br><br>
+
+    <strong>Nginx Proxy Manager:</strong> Configured as a reverse proxy to manage domain-based access to my self-hosted services.<br><br>
+
+    <strong>Wazuh:</strong> Security monitoring to collect and analyse security events and identify potential vulnerabilities across my systems.<br><br>
+
+    <strong>Glances:</strong> System monitoring to observe server health, including CPU, memory, storage and network utilisation.<br><br>
+
+    <strong>Mosquitto MQTT:</strong> A message broker used to facilitate communication between my own DIY smart doorbell and Home Assistant.<br><br>
+
+    Alongside these, I run various additional services to support the infrastructure and continue experimenting with new applications and technologies.<br><br>
+
+    Another significant addition to my homelab has been the development of my own Power over Ethernet (PoE) CCTV system, which I have documented separately in this portfolio.<br><br>
+
+    I integrated the camera system with Frigate NVR, running within a Docker container on my server. This allows me to pull live camera streams into a centralised dashboard, manage local video recording and utilise AI-powered object detection.<br><br>
+
+    This project also involved configuring network-connected cameras, creating custom Ethernet cables and integrating the CCTV infrastructure with my existing server environment.<br><br>
+
+    After going through numerous iterations of my homelab, both in terms of hardware and software, I eventually began working towards a more organised and purpose-built setup.<br><br>
+
+    This led me to design and 3D print my own 10-inch 6U homelab rack, including custom components and mounting panels. Rather than simply placing my server equipment wherever there was space, I wanted to create a more structured installation that could accommodate my hardware and allow for future expansion.<br><br>
+
+    I've documented the design, printing and assembly process in a separate project within this portfolio.</p>
+  </div>
+
+  <div class="project-block">
+    <h2>What I learned</h2>
+
+    <p>What started as upgrading an old computer has gradually developed into a long-term personal project involving Linux system administration, networking, virtualisation, storage management, cybersecurity, Docker containerisation, hardware configuration and home automation.<br><br>
+
+    One of the things I enjoy most about maintaining my homelab is that there is always something new to learn. Whether I'm troubleshooting a service that has stopped working, configuring a new application, investigating a networking issue or experimenting with different hardware, I'm constantly developing my technical knowledge through practical experience.<br><br>
+
+    Most importantly, I've learned how to research unfamiliar technologies, work through problems independently, adapt when something doesn't work as expected and build solutions using the equipment available to me.<br><br>
+
+    My homelab continues to evolve, and I see it as an ongoing learning environment rather than a finished project. It has played a major part in developing my interest in IT and is one of the reasons I've decided to pursue a career in IT support and systems administration.</p>
+  </div>
+
+  <!-- IMAGES. Folder: images/homelab -->
+  <div class="showcase">
+    <h2 class="showcase-title">Gallery</h2>
+    <figure class="shot">
+      <figcaption>
+        <h3>First Homelab Server</h3>
+        <p>My first homelab setup, built using an old computer that I repurposed into a home server. This was where I started experimenting with Linux, network storage and self-hosted services.</p>
+        <br>
+      </figcaption>
+      <a class="shot-image" href="images/homelab/FirstServer.jpg">
+        <img src="images/homelab/FirstServer.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+      </a>
+    </figure>
+
+     <figure class="shot">
+      <figcaption>
+        <h3>Equipment I was donated</h3>
+        <p>This photo shows a small selection of the hardware and components I received through donated equipment. The main items I was given were the collection of hard drives and RAM modules shown, which provided additional storage and memory for my homelab projects. The wider donation also included a Dell PowerEdge R210 server, several server motherboards, a Windows tablet, a PDU (Power Distribution Unit), a hot-swappable server power supply, an empty server rack, numerous CPUs, a small low-powered PC and various other hardware components. Some of the other components pictured were already part of my own collection.
+
+Having access to such a wide range of donated equipment gave me the opportunity to experiment with different hardware, upgrade existing systems and explore server infrastructure without having to purchase every component myself.</p>
+        <br>
+      </figcaption>
+      <a class="shot-image" href="images/homelab/DonatedHardware.jpg">
+        <img src="images/homelab/DonatedHardware.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+      </a>
+    </figure>
+
+
+    <figure class="shot">
+      <figcaption>
+        <h3>Second Homelab Setup</h3>
+
+        <p>
+          My second homelab server was built around an Intel i5-6500 processor and motherboard that I received as donated hardware. This was a significant upgrade from my earlier setups, giving me more processing power and room to expand. I installed Debian 12 alongside CasaOS, which provided a graphical interface for managing the server and its applications.
+        </p>
+
+        <p>
+          I began hosting a wider range of services, including Jellyfin for media streaming, Swing Music for music streaming, Immich for photo storage, Home Assistant for home automation, Wazuh for security monitoring and Glances for system monitoring. I also set up Nginx Proxy Manager to manage access to my hosted services through domain names. During this stage, I started experimenting with Docker Compose, learning how to define, deploy and manage multiple containerised applications.
+        </p>
+
+        <p>
+          The Raspberry Pi 3, also shown in the image, continued to play an important role in my homelab. I used it to run AdGuard Home for network-wide ad and tracker blocking, as well as Tailscale as a subnet router. This allowed me to securely access devices across my home network remotely when away from home, without exposing those services directly to the internet.
+        </p>
+
+        <p>
+          This setup became the foundation for a much more capable and versatile homelab, combining dedicated server hardware with a separate Raspberry Pi for network services and secure remote access.
+        </p>
+
+        <br>
+     </figcaption>
+
+        <a class="shot-image" href="images/homelab/Second Server Setup.jpg">
+          <img src="images/homelab/Second Server Setup.jpg"
+              alt="Second homelab setup featuring an Intel i5-6500 server and Raspberry Pi 3"
+              loading="lazy"
+              onerror="this.closest('.shot-image').style.display='none'">
+        </a>
+    </figure>
+
+    <figure class="shot">
+      <figcaption>
+        <h3>AI + GPU Experiment</h3>
+
+        <p>
+          I purchased a low-cost, second-hand NVIDIA GeForce GTX 960 to experiment with GPU passthrough and explore different GPU-accelerated workloads within my homelab. I installed the graphics card into my second homelab server chassis and began experimenting with Proxmox VE, configuring GPU passthrough to virtual machines running both Windows and Linux. This allowed me to explore how dedicated hardware could be assigned directly to virtual machines, as well as learn more about virtualisation, hardware compatibility and GPU configuration.
+        </p>
+
+        <p>
+          I also experimented with AI-powered image upscaling using
+          <a href="https://chainner.app/" target="_blank" rel="noopener noreferrer">chaiNNer</a>,
+          exploring how GPU acceleration could be used to process and enhance lower-resolution images. I tested different workflows, software configurations and processing options to see how the graphics card handled these workloads.
+        </p>
+
+        <p>
+          Rather than following a fixed project or building a system for one specific purpose, this was an opportunity to experiment with different technologies, try out new software and learn through hands-on testing. It helped me develop a better understanding of Proxmox virtualisation, GPU passthrough, Linux and Windows environments, and the practical applications of GPU acceleration for AI workloads.
+        </p>
+
+        <br>
+      </figcaption>
+
+      <a class="shot-image" href="images/homelab/AI + GPU Experiment.jpg">
+        <img src="images/homelab/AI + GPU Experiment.jpg"
+            alt="NVIDIA GTX 960 installed in a homelab server for GPU passthrough and AI upscaling experiments"
+            loading="lazy"
+            onerror="this.closest('.shot-image').style.display='none'">
+      </a>
+    </figure>
+
+    <figure class="shot">
+      <figcaption>
+        <h3>Dell Power Edge R210 Experiment</h3>
+        <p>My Dell PowerEdge R210 server, which I received as donated hardware, became my introduction to dedicated server hardware and virtualisation. I installed Proxmox VE, a type-1 hypervisor, allowing me to run multiple isolated environments on a single physical machine. This was where I began experimenting with virtual machines (VMs) and Linux Containers (LXC), learning how to allocate hardware resources, install different operating systems and manage separate services independently. I also spent considerable time experimenting with GPU passthrough, learning how to assign a physical graphics card directly to a virtual machine and troubleshoot the hardware and configuration challenges involved. I used this setup to explore virtualisation, test different configurations and develop my understanding of server management without needing separate physical machines for each task. This project gave me valuable hands-on experience with Proxmox, virtual machines, LXC containers and hardware passthrough.</p>
+        <br>
+      </figcaption>
+      <a class="shot-image" href="images/homelab/Dell PowerEdge Server 1.jpg">
+        <img src="images/homelab/Dell PowerEdge Server 1.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+      </a>
+      <a class="shot-image" href="images/homelab/Dell Power Edge Server 2.jpg">
+        <img src="images/homelab/Dell Power Edge Server 2.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+      </a>
+      <a class="shot-image" href="images/homelab/Dell Power Edge Server 3.jpg">
+        <img src="images/homelab/Dell Power Edge Server 3.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+      </a>
+    </figure>
+
+    <figure class="shot">
+    <figcaption>
+      <h3>Third Homelab Setup</h3>
+      <p>My third homelab setup, where I brought together two servers: my Dell PowerEdge R210 and my Intel i5-6500-based server. I used the Dell PowerEdge R210 as my primary Proxmox VE server, hosting my virtualised environment and running the majority of my services and Docker-based applications. Alongside this, I configured my i5-6500 server as a secondary Proxmox machine, giving me an additional server to experiment with and providing a separate environment alongside my main setup. This was another step in developing my understanding of multi-server environments, virtualisation and resource management. Running two Proxmox servers also allowed me to explore different configurations and understand how multiple physical machines could work together within a homelab.</p>
+      <br>
+    </figcaption>
+    <a class="shot-image" href="images/homelab/Third Home Lab Setup.jpg">
+      <img src="images/homelab/Third Home Lab Setup.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+    </a>
+  </figure>
+
+    <figure class="shot">
+      <figcaption>
+        <h3>Fourth Homelab Setup</h3>
+
+        <p>
+          My fourth homelab server setup involved taking the Intel i5-6500 motherboard and processor from my previous build and transferring them into a smaller, more compact Micro-ATX case. I also switched to a much smaller power supply rated at approximately 200W, helping reduce the overall size and power requirements of the system. This allowed me to retain the same hardware and performance while making the server considerably more space-efficient and easier to fit into my homelab.
+        </p>
+
+        <p>
+          I also put additional effort into organising the external cabling behind the setup, using zip ties to neatly bundle and secure the cables. This created a tidier appearance, reduced cable clutter and helped minimise potential safety hazards caused by loose or trailing cables.
+        </p>
+
+        <p>
+          I decided to keep my Raspberry Pi 3 as a separate part of the setup because it continued to serve an important role within my home network. It ran AdGuard Home to provide network-wide ad and tracker blocking, alongside Tailscale configured as a subnet router. This gave me a dedicated device for network-wide filtering and secure remote access to my home network, without needing to move these services onto my main server.
+        </p>
+
+        <p>
+          This rebuild gave me another opportunity to develop my practical skills in PC building, hardware compatibility, power requirements and cable management, while continuing to build on the network infrastructure I had established in my earlier homelab setups.
+        </p>
+
+        <br>
+      </figcaption>
+
+      <a class="shot-image" href="images/homelab/Fourth Home Lab Setup.jpg">
+        <img src="images/homelab/Fourth Home Lab Setup.jpg"
+            alt="Fourth homelab setup featuring a compact Micro-ATX server and Raspberry Pi 3"
+            loading="lazy"
+            onerror="this.closest('.shot-image').style.display='none'">
+      </a>
+    </figure>
+    
+    <figure class="shot">
+      <figcaption>
+      <h3>Fifth/Current Homelab Setup</h3>
+
+      <p>
+        This is my fifth and current homelab setup, bringing together my Debian-based server and wider home network infrastructure. The main server is built around an Intel Core i5-6500 motherboard with 16GB of DDR4 RAM, a 500GB HDD used as the boot drive and a recently purchased 4TB Seagate IronWolf NAS drive, which I managed to buy before storage prices increased significantly.
+      </p>
+
+      <p>
+        The server hosts several self-hosted services through Docker, including Jellyfin for media streaming, Swing Music for music streaming, Immich for photo management, Home Assistant for home automation and Nginx Proxy Manager for managing access to my services. I also use Glances to monitor server performance and Wazuh to monitor my gaming PC, Linux laptop and homelab server for security events, vulnerabilities and suspicious activity.
+      </p>
+
+      <p>
+        Alongside the main server, I use a Raspberry Pi running AdGuard Home to provide network-wide ad and tracker blocking. The Pi also acts as a Tailscale subnet router, allowing me to securely access devices and services across my entire home network from anywhere in the world. This includes remotely accessing my CCTV system through Frigate NVR, allowing me to view my camera feeds and recordings while away from home, even when connected to an untrusted public Wi-Fi network, such as in a coffee shop.
+      </p>
+
+      <p>
+        The entire setup is housed in a custom 3D-printed server rack based on the Lab Rax design from MakerWorld. I designed several of my own custom panels using Autodesk Fusion 360, including the main server/node panel featuring a custom power button and USB 3.0 ports, a front panel designed to enclose and house the PSU for my main i5-6500 system, and a dedicated front panel to house the 500GB boot drive and 4TB NAS drive. I have documented the rack design, custom panels, 3D printing and assembly separately in another project within this portfolio.
+      </p>
+    <br>
+    <a href="https://makerworld.com/en/collections/5813742-lab-rax"
+       target="_blank"
+       rel="noopener noreferrer">
+      View the Lab Rax design on MakerWorld
+    </a>
+
+    <br><br>
+      </figcaption>
+
+  <a class="shot-image" href="images/homelab/FifthHomeLabSetup.jpg">
+    <img src="images/homelab/FifthHomeLabSetup.jpg"
+         alt="Fifth and current homelab setup featuring a custom 3D-printed server rack"
+         loading="lazy"
+         onerror="this.closest('.shot-image').style.display='none'">
+  </a>
+</figure>
+
+  </div>
+
+  <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+</article>
+
+      <!-- 2. SECURE HOME NETWORK -->
+      <article class="project-page" data-project="network" data-title="Secure Home Network" hidden>
+        <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / Secure Home Network</p>
+        <h1>Secure Home Network</h1>
+        <p class="lead">Placeholder: a short summary of what this project is and why you built it.</p>
+        <div class="badges">
+          <span class="badge">OpenWrt</span><span class="badge">AdGuard Home</span><span class="badge">Tailscale</span><span class="badge">Xray</span>
+        </div>
+        <div class="project-block"><h2>Overview</h2>
+          <p>Placeholder text. Explain why you separated Main, IoT and Guest networks and what threats this protects against.</p></div>
+        <div class="project-block"><h2>What I did</h2>
+          <ul>
+            <li>Placeholder: how I flashed OpenWrt on the TP-Link Archer C6.</li>
+            <li>Placeholder: how I set up the three isolated networks.</li>
+            <li>Placeholder: how DNS blocking, Tailscale and the backup Xray tunnel work together.</li>
+          </ul></div>
+        <div class="project-block"><h2>What I learned</h2>
+          <p>Placeholder text. Mention IP addressing, DNS, firewall rules and remote access.</p></div>
+
+        <!-- EDIT THIS: IMAGES. Folder: images/network. Hide any IP addresses or domains in screenshots. -->
+        <div class="showcase">
+          <h2 class="showcase-title">Gallery</h2>
+          <figure class="shot">
+            <a class="shot-image" href="images/network/image1.jpg">
+              <img src="images/network/image1.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <figcaption>
+              <h3>Picture title</h3>
+              <p>Write a few sentences about this picture: what it shows and why it matters.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+      </article>
+
+      <!-- 3. ACTIVE DIRECTORY LAB -->
+      <article class="project-page" data-project="adlab" data-title="Active Directory Lab" hidden>
+        <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / Active Directory Lab</p>
+        <h1>Active Directory Lab</h1>
+        <p class="lead">Placeholder: a short summary of what this project is and why you built it.</p>
+        <div class="badges">
+          <span class="badge">Windows Server</span><span class="badge">Active Directory</span><span class="badge">GPO</span>
+        </div>
+        <div class="project-block"><h2>Overview</h2>
+          <p>Placeholder text. Explain what the lab simulates (a small company network) and why.</p></div>
+        <div class="project-block"><h2>What I did</h2>
+          <ul>
+            <li>Placeholder: how I set up the Windows Server domain.</li>
+            <li>Placeholder: how I created and managed user accounts.</li>
+            <li>Placeholder: which Group Policies I applied and how I tested them.</li>
+          </ul></div>
+        <div class="project-block"><h2>What I learned</h2>
+          <p>Placeholder text. Mention permissions, policy testing and troubleshooting.</p></div>
+
+        <!-- EDIT THIS: IMAGES. Folder: images/adlab -->
+        <div class="showcase">
+          <h2 class="showcase-title">Gallery</h2>
+          <figure class="shot">
+            <a class="shot-image" href="images/adlab/image1.jpg">
+              <img src="images/adlab/image1.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <figcaption>
+              <h3>Picture title</h3>
+              <p>Write a few sentences about this picture: what it shows and why it matters.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+      </article>
+
+      <!-- 4. PROXMOX -->
+      <article class="project-page" data-project="proxmox" data-title="Virtualisation with Proxmox" hidden>
+        <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / Virtualisation with Proxmox</p>
+        <h1>Virtualisation with Proxmox</h1>
+        <p class="lead">Placeholder: a short summary of what this project is and why you built it.</p>
+        <div class="badges">
+          <span class="badge">Proxmox VE</span><span class="badge">LXC</span><span class="badge">GPU passthrough</span>
+        </div>
+        <div class="project-block"><h2>Overview</h2>
+          <p>Placeholder text. Explain what Proxmox is used for in your setup.</p></div>
+        <div class="project-block"><h2>What I did</h2>
+          <ul>
+            <li>Placeholder: how I created virtual machines and LXC containers.</li>
+            <li>Placeholder: how I configured GPU passthrough on NVIDIA GPUs.</li>
+            <li>Placeholder: what I use the VMs for (gaming, AI workloads).</li>
+          </ul></div>
+        <div class="project-block"><h2>What I learned</h2>
+          <p>Placeholder text. Mention hypervisors, resource allocation and passthrough troubleshooting.</p></div>
+
+        <!-- EDIT THIS: IMAGES. Folder: images/proxmox -->
+        <div class="showcase">
+          <h2 class="showcase-title">Gallery</h2>
+          <figure class="shot">
+            <a class="shot-image" href="images/proxmox/image1.jpg">
+              <img src="images/proxmox/image1.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <figcaption>
+              <h3>Picture title</h3>
+              <p>Write a few sentences about this picture: what it shows and why it matters.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+      </article>
+
+      <!-- 5. CCTV -->
+      <article class="project-page" data-project="cctv" data-title="PoE CCTV System" hidden>
+        <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / PoE CCTV System</p>
+        <h1>PoE CCTV System</h1>
+        <p class="lead">This project covers my upgrade from a budget, DIY ESP32-CAM setup to a professional, hardwired 1440p PoE camera system. The new network features four strategically placed cameras (front door, conservatory, and two garage entry points) managed locally via a Frigate NVR Docker container with AI object detection.</p>
+        <div class="badges">
+          <span class="badge">PoE</span><span class="badge">Frigate</span><span class="badge">Cabling</span>
+        </div>
+        <div class="project-block"><h2>Overview</h2>
+          <p>This project outlines the design and deployment of my Power over Ethernet (PoE) CCTV system, using some PoE cameras I managed to get on sale from AliExpress.</p></div>
+        <div class="project-block"><h2>What I did</h2>
+          <p>This project started off as a cheap, DIY ESP32-CAM CCTV setup. It worked well for a while and allowed me to design and develop my own camera frame in CAD, which helped me learn a lot of new skills. However, I ran into a lot of issues with these ESP32-CAMs, mainly down to power issues, brownouts, and poor quality over Wi-Fi.</p>
+          <br>
+          <p>After a while, I decided to upgrade to some beefy 1440p PoE cameras. The main reason for doing this was to move away from the problems I had with the Wi-Fi-based cameras. Because the newer PoE cameras connect via Ethernet, it dramatically fixed the quality and improved the network stability for my setup.</p>
+          <br>
+          <p>Once the project was underway, I planned out the installation locations while waiting for the new cameras to arrive. I decided the first camera would go outside the front of my house near the doorway, giving me a good view of anyone or anything trying to enter. For the second camera, I chose the conservatory, as this is another potential entry point for an intruder. The third camera went outside my garage, looking towards the garage entrance to secure another vulnerable spot. The last camera I put up was outside at the back of the garage, facing the electronic back door to ensure that entry point was covered too.</p>
+          <br>
+          <p>With the plan in place, I finally installed the new cameras in their locations. Throughout the installation, I had to cut several Ethernet cables to length, as well as cut and re-crimp some of the camera cables. This was because some lines needed to be downsized, and I needed to fit the Ethernet cables through small holes to route them to the cameras.</p>
+          <br>
+          <p>To finish off the project, I set up a Docker container called Frigate NVR on my home lab server. This allows Frigate to capture the streams from the cameras and display them in a live grid for easy viewing. It also allowed me to set up AI-based detection for recording, meaning I wasn't wasting time or storage on false-positive motion detection.</p>
+        </div>
+        <div class="project-block"><h2>What I learned</h2>
+          <p>Placeholder text. Mention PoE, cabling and video storage.</p></div>
+
+        <div class="showcase">
+          <h2 class="showcase-title">Gallery</h2>
+
+          <h2>Front Door Camera</h2>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Ethernet Cable Termination</h3>
+              <p>Here is the Cat 6 Ethernet cable I crimped for my front door camera.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/frontdoorcam/etherentcrimp.jpg">
+              <img src="images/cctv/frontdoorcam/etherentcrimp.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Testing the front door camera's Ethernet cable.</h3>
+              <p>Here I tested the custom Cat 6 Ethernet crimp for the front door camera to make sure everything is running smoothly.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/frontdoorcam/testingethernet.jpg">
+              <img src="images/cctv/frontdoorcam/testingethernet.jpg"  loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Drilling the mounting holes for the front door camera's junction box.</h3>
+              <p>Here I drilled the holes to mount the front door camera's junction box.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/frontdoorcam/DrilledHoles.jpg">
+              <img src="images/cctv/frontdoorcam/DrilledHoles.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Mounting and installing the junction box for the front door camera.</h3>
+              <p>Here I installed the front door camera's junction box to keep the wiring safe and secure.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/frontdoorcam/JunctionBoxInstalled.jpg">
+              <img src="images/cctv/frontdoorcam/JunctionBoxInstalled.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Weatherproofing the Ethernet connection.</h3>
+              <p>Here I am making sure the Ethernet cable is completely protected against the rain and weather before closing up the junction box.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/frontdoorcam/EtherentCableWaterproofing.jpg">
+              <img src="images/cctv/frontdoorcam/EtherentCableWaterproofing.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>The finished installation.</h3>
+              <p>The front door camera is officially up and installed! Everything is connected, tested, and ready to go</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/frontdoorcam/frontdoorcam.jpg">
+              <img src="images/cctv/frontdoorcam/frontdoorcam.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/cctv/frontdoorcam/front_porch_camera_livefeed.jpg">
+              <img src="images/cctv/frontdoorcam/front_porch_camera_livefeed.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <h2>Conservatory Camera</h2>
+          
+          <figure class="shot">
+            <figcaption>
+              <h3>Drilling the mounting holes to mount the conservatory camera.</h3>
+              <p>Here I am drilling the mounting holes for the camera. A junction box wasn't required since the camera is indoors and protected from the weather. Because the wall was too soft for screws alone, I inserted wall plugs first to ensure a secure mount.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/consevatroycam/DrilledHoles+WallPlugs1.jpg">
+              <img src="images/cctv/consevatroycam/DrilledHoles+WallPlugs1.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/cctv/consevatroycam/DrilledHoles+WallPlugs2.jpg">
+              <img src="images/cctv/consevatroycam/DrilledHoles+WallPlugs2.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Ethernet Cable Termination</h3>
+              <p>Here is the Ethernet cable I crimped for my conservatory camera. Although I don't have photos of the process, the cable was fully tested and verified before installation.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/consevatroycam/customEtherent.jpg">
+              <img src="images/cctv/consevatroycam/customEtherent.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Mounting the camera to the wall to finish the installation</h3>
+              <p>Finally, I mounted the camera to the wall by screwing it directly into the wall plugs for a secure fit. Down below are some pictures of the installed camera and a screenshot of the live view from the camera.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/consevatroycam/consevatroycam1.jpg">
+              <img src="images/cctv/consevatroycam/consevatroycam1.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/cctv/consevatroycam/consevatroycam2.jpg">
+              <img src="images/cctv/consevatroycam/consevatroycam2.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/cctv/consevatroycam/consevatroycam3.jpg">
+              <img src="images/cctv/consevatroycam/consevatroycam3.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+             <a class="shot-image" href="images/cctv/consevatroycam/ConsevatroyCam_LiveFeed.jpg">
+              <img src="images/cctv/consevatroycam/ConsevatroyCam_LiveFeed.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <h2>Garden Camera</h2>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Mounting the junction box to the wall</h3>
+              <p>First up was installing the junction box on the wall. The wall turned out to be incredibly tough to drill into, so unfortunately, I could only manage to get two screws securely in place—but it's still holding solid!</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/gardencam/junction box installed.png">
+              <img src="images/cctv/gardencam/junction box installed.png" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Garden Camera is installed</h3>
+              <p>The last step was mounting the camera to the junction box, and thankfully everything went smoothly from there. Here’s a look at the finished installation and the camera feed!</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/gardencam/gardencam1.jpg">
+              <img src="images/cctv/gardencam/gardencam1.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/cctv/gardencam/GardenCam_LiveFeed.jpg">
+              <img src="images/cctv/gardencam/GardenCam_LiveFeed.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <h2>Garage Camera</h2>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Mounting and installing the junction box for the garage camera.</h3>
+              <p>First I got the garage camera junction box mounted! The wall gave me a massive headache when drilling holes for the mounting screws, so I had to settle for just three—but it’s locked in place and isn't going anywhere. Luckily, drilling the main hole through the wall went without any problems, so I could pull the power cable and Ethernet line cleanly through the back of the box with plenty of slack.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/garagecam/JunctionBoxInstalled.jpg">
+              <img src="images/cctv/garagecam/JunctionBoxInstalled.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Weatherproofing the Power and Etherent cables</h3>
+              <p>Next, I focused on weatherproofing the connections. Since this is outdoors, I wrapped both the Ethernet and power cables heavily with electrical tape to keep them completely safe from the elements before sealing everything up.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/garagecam/WeatherProofingEthernetCableAndPower.jpg">
+              <img src="images/cctv/garagecam/WeatherProofingEthernetCableAndPower.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Securing the power and Ethernet cables inside the junction box.</h3>
+              <p>After getting everything wrapped up, I carefully tucked all the weatherproofed cabling inside the junction box. It's a tight fit with the extra tape, but everything routes nicely out of the side cutout and is ready for the camera to be mounted.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/garagecam/AcloseupOfJunctionBox.jpg">
+              <img src="images/cctv/garagecam/AcloseupOfJunctionBox.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Mounting the camera to the junction box.</h3>
+              <p>Lastly, I mounted the camera to the junction box to finish off the installation. Everything is up and connected now. Here are some pictures of how it turned out, and also a screenshot of the live view through the camera to show the final result.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/cctv/garagecam/GarageCam1.jpg">
+              <img src="images/cctv/garagecam/GarageCam1.jpg" alt="Garage camera view 1" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/cctv/garagecam/GarageCam2.jpg">
+              <img src="images/cctv/garagecam/GarageCam2.jpg" alt="Garage camera view 2" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/cctv/garagecam/GarageCam3.jpg">
+              <img src="images/cctv/garagecam/GarageCam3.jpg" alt="Garage camera view 3" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/cctv/garagecam/GarageCamLiveFeedDayTime.jpg">
+              <img src="images/cctv/garagecam/GarageCamLiveFeedDayTime.jpg" alt="Garage camera live feed in night vision" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+             <a class="shot-image" href="images/cctv/garagecam/GarageCamLiveFeedNightVision.jpg">
+              <img src="images/cctv/garagecam/GarageCamLiveFeedNightVision.jpg" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <!-- To add another picture, copy the whole <figure> block above and paste it here. -->
+        </div>
+
+        <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+      </article>
+
+      <!-- 6. RACK -->
+      <article class="project-page" data-project="rack" data-title="3D-Printed Homelab Rack" hidden>
+        <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / 3D-Printed Homelab Rack</p>
+        <h1>3D-Printed Homelab Rack</h1>
+        <p class="lead">Placeholder: a short summary of what this project is and why you built it.</p>
+        <div class="badges">
+          <span class="badge">3D printing</span><span class="badge">Design</span><span class="badge">Hardware</span>
+        </div>
+        <div class="project-block"><h2>Overview</h2>
+          <p>Placeholder text. Explain why you needed a compact 10-inch rack.</p></div>
+        <div class="project-block"><h2>What I did</h2>
+          <ul>
+            <li>Placeholder: which community model I started from.</li>
+            <li>Placeholder: how I modified it to fit my setup.</li>
+            <li>Placeholder: how I designed and printed custom front panels.</li>
+          </ul></div>
+        <div class="project-block"><h2>What I learned</h2>
+          <p>Placeholder text. Mention design, tolerances and cable management.</p></div>
+
+        <!-- EDIT THIS: IMAGES. Folder: images/rack -->
+        <div class="showcase">
+          <h2 class="showcase-title">Gallery</h2>
+          <figure class="shot">
+            <a class="shot-image" href="images/rack/image1.jpg">
+              <img src="images/rack/image1.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <figcaption>
+              <h3>Picture title</h3>
+              <p>Write a few sentences about this picture: what it shows and why it matters.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+      </article>
+
+      <!-- 7. MOTHERBOARD REPAIR -->
+      <article class="project-page" data-project="motherboard" data-title="Motherboard Hardware Repair" hidden>
+        <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / Motherboard Hardware Repair</p>
+        <h1>Motherboard Hardware Repair</h1>
+        <p class="lead">Placeholder: diagnosed and fixed a recurring boot error caused by a missing USB header connection.</p>
+        <div class="badges">
+          <span class="badge">Fault diagnosis</span><span class="badge">Soldering</span><span class="badge">Research</span>
+        </div>
+        <div class="project-block"><h2>Overview</h2>
+          <p>Placeholder text. Describe the symptoms, what the board was, and why it kept failing to boot.</p></div>
+        <div class="project-block"><h2>What I did</h2>
+          <ul>
+            <li>Placeholder: how I narrowed the fault down.</li>
+            <li>Placeholder: how I found the missing USB header connection.</li>
+            <li>Placeholder: how I installed fine-gauge wiring to fix it.</li>
+          </ul></div>
+        <div class="project-block"><h2>What I learned</h2>
+          <p>Placeholder text. Mention methodical troubleshooting and research.</p></div>
+
+        <!-- EDIT THIS: IMAGES. Folder: images/motherboard -->
+        <div class="showcase">
+          <h2 class="showcase-title">Gallery</h2>
+          <figure class="shot">
+            <a class="shot-image" href="images/motherboard/image1.jpg">
+              <img src="images/motherboard/image1.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <figcaption>
+              <h3>Picture title</h3>
+              <p>Write a few sentences about this picture: what it shows and why it matters.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+      </article>
+
+      <!-- 8. CUSTOM PC BUILDS -->
+      <article class="project-page" data-project="pcbuilds" data-title="Custom PC Builds" hidden>
+        <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / Custom PC Builds</p>
+
+        <h1>Custom PC Builds</h1>
+        <p class="lead">A collection of my practical experience building, upgrading and maintaining desktop PCs and laptops, showcasing my hands-on knowledge of computer hardware and troubleshooting.</p>
+
+        <div class="badges">
+          <span class="badge">PC builds</span>
+          <span class="badge">Hardware</span>
+          <span class="badge">Thermal paste</span>
+          <span class="badge">Troubleshooting</span>
+        </div>
+
+        <div class="project-block">
+          <h2>Overview</h2>
+          <br>
+          <p>
+            This section showcases my practical experience building, upgrading and working with desktop PCs. It highlights the hands-on side of my interest in computer hardware, from selecting compatible components and assembling systems to installing operating systems, troubleshooting hardware issues and improving existing builds. These projects demonstrate my practical knowledge of PC components, hardware compatibility, system configuration and problem-solving.
+          </p>
+          <br>
+        </div>
+
+        <div class="project-block">
+          <h2>What I did</h2>
+          <br>
+
+          <h3>First Custom PC Build</h3>
+          <br>
+          <p>
+            My first custom desktop PC was built around an AMD Ryzen 5 5600 processor, NVIDIA GeForce GTX 1050 Ti graphics card and 16GB of RAM. This gave me my first real hands-on experience assembling a computer, understanding component compatibility and learning how the different parts work together. It was the starting point for developing my practical skills and confidence in PC building, hardware configuration and troubleshooting.
+          </p>
+
+          <br>
+          <h3>HP Omen 17 Laptop Maintenance</h3>
+          <br>
+          <p>
+            I also carried out extensive maintenance on my HP Omen 17 gaming laptop, equipped with a 10th-generation Intel Core i7 processor, NVIDIA GeForce RTX 2060 graphics and 32GB of RAM. I completely dismantled the laptop to access its internal cooling system, thoroughly removed accumulated dust and debris, cleaned the cooling components and replaced the thermal paste on both the CPU and GPU. This gave me valuable experience working with laptop internals, cooling systems and thermal management, as well as understanding the importance of regular hardware maintenance.
+          </p>
+
+          <br>
+          <h3>Current Custom PC Build</h3>
+          <br>
+          <p>
+            My latest desktop PC features an AMD Ryzen 7 5600X processor, AMD Radeon RX 7800 XT graphics card and an NZXT case. Building this system further developed my experience selecting compatible components, assembling hardware, managing internal cabling and configuring a higher-performance desktop. I also installed an AIO liquid CPU cooler, system fans and RGB lighting, gaining further practical experience with modern PC cooling solutions, component installation and system configuration.
+          </p>
+
+          <br>
+          <p>
+            Across these projects, I have developed practical experience building, upgrading, dismantling and maintaining both desktop computers and laptops. I enjoy working directly with hardware, understanding how components function, identifying potential issues and carrying out repairs and improvements myself. These projects demonstrate the practical side of my interest in IT and my ability to develop technical skills through independent, hands-on experience.
+          </p>
+          <br>
+        </div>
+
+        <div class="project-block">
+          <h2>What I learned</h2>
+          <br>
+          <p>
+            Through these builds and maintenance projects, I have developed a better understanding of PC component compatibility, hardware installation, power requirements, cooling solutions and thermal management. I have also gained experience carefully dismantling and reassembling computers, maintaining internal components and organising cabling. Most importantly, I have developed confidence working independently with different types of hardware and approaching technical problems methodically.
+          </p>
+          <br>
+        </div>
+
+        <!-- EDIT THIS: IMAGES. Folder: images/pcbuilds -->
+        <div class="showcase">
+          <h2 class="showcase-title">Gallery</h2>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>My First Custom-Built PC</h3>
+              <p>My first custom-built desktop PC, featuring an AMD Ryzen 5 5600 processor, NVIDIA GeForce GTX 1050 Ti graphics card and 16GB of RAM. This build gave me my first hands-on experience assembling a PC, installing components and learning how the different hardware works together.</p>
+              <br>
+            </figcaption>
+            <a class="shot-image" href="images/pcbuilds/First PC Build (1).jpg">
+              <img src="images/pcbuilds/First PC Build (1).jpg" alt="Custom desktop PC build" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/pcbuilds/First PC Build (2).jpg">
+              <img src="images/pcbuilds/First PC Build (2).jpg" alt="Custom desktop PC build" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>HP Omen 17 Laptop Maintenance</h3>
+              <p>Here is my HP Omen 17 gaming laptop, which I carried out a full internal clean and maintenance on. I completely dismantled the laptop to access its internal components and removed the entire heatsink and cooling assembly, as shown in one of the photos. With the cooling assembly removed, I thoroughly cleaned out the accumulated dust and debris from inside the laptop, including the cooling fans, heatsinks and surrounding components. I also carefully removed the old thermal paste from both the CPU and GPU before applying fresh thermal paste and reinstalling the cooling assembly. This gave me valuable hands-on experience working with laptop internals, understanding cooling systems and carrying out hardware maintenance to help improve thermal performance.</p>
+              <br>  
+            </figcaption>
+            <a class="shot-image" href="images/pcbuilds/OmenLaptop1.jpg">
+              <img src="images/pcbuilds/OmenLaptop1.jpg" alt="Custom desktop PC build" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/pcbuilds/OmenLaptop2.jpg">
+              <img src="images/pcbuilds/OmenLaptop2.jpg" alt="Custom desktop PC build" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/pcbuilds/OmenLaptop3.jpg">
+              <img src="images/pcbuilds/OmenLaptop3.jpg" alt="Custom desktop PC build" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+          <figure class="shot">
+            <figcaption>
+              <h3>Current Custom PC Build</h3>
+              <p>Here is my current custom-built gaming PC, featuring an AMD Ryzen 7 5600X processor, AMD Radeon RX 7800 XT graphics card and an NZXT case. I assembled the system myself, selecting compatible components and installing the motherboard, processor, graphics card, memory and storage. I also fitted an AIO liquid CPU cooler, additional case fans and RGB lighting. In the first image, I was testing the RGB fans to make sure they were all functioning correctly before finalising the build and committing to the cable management. Once everything was working as expected, I completed the internal cabling and overall system layout. This build further developed my practical experience with modern PC hardware, component compatibility, cooling solutions and computer assembly.</p>
+              <br>  
+            </figcaption>
+            <a class="shot-image" href="images/pcbuilds/Current PC Build 1.jpg">
+              <img src="images/pcbuilds/Current PC Build 1.jpg" alt="Custom desktop PC build" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <a class="shot-image" href="images/pcbuilds/Current PC Build 2.jpg">
+              <img src="images/pcbuilds/Current PC Build 2.jpg" alt="Custom desktop PC build" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+          </figure>
+
+        </div>
+
+        <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+      </article>
+
+      <!-- 9. XBOX 360 -->
+      <article class="project-page" data-project="xbox" data-title="Xbox 360 RGH3 Modification" hidden>
+        <p class="crumbs"><a class="js-back" href="index.html#projects">Projects</a> / Xbox 360 RGH3 Modification</p>
+        <h1>Xbox 360 RGH3 Modification</h1>
+        <p class="lead">Placeholder: precision soldering and firmware work on an Xbox 360 motherboard.</p>
+        <div class="badges">
+          <span class="badge">Soldering</span><span class="badge">NAND</span><span class="badge">Firmware</span>
+        </div>
+        <div class="project-block"><h2>Overview</h2>
+          <p>Placeholder text. Explain what the modification involves and why you did it.</p></div>
+        <div class="project-block"><h2>What I did</h2>
+          <ul>
+            <li>Placeholder: how I soldered a Pico board to the motherboard to create a NAND dump.</li>
+            <li>Placeholder: how I flashed the custom firmware.</li>
+            <li>Placeholder: how I made precision soldered connections to the PLL points.</li>
+          </ul></div>
+        <div class="project-block"><h2>What I learned</h2>
+          <p>Placeholder text. Mention fine soldering and following technical guides.</p></div>
+
+        <!-- EDIT THIS: IMAGES. Folder: images/xbox -->
+        <div class="showcase">
+          <h2 class="showcase-title">Gallery</h2>
+          <figure class="shot">
+            <a class="shot-image" href="images/xbox/image1.jpg">
+              <img src="images/xbox/image1.jpg" alt="Describe this picture" loading="lazy" onerror="this.closest('.shot-image').style.display='none'">
+            </a>
+            <figcaption>
+              <h3>Picture title</h3>
+              <p>Write a few sentences about this picture: what it shows and why it matters.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="back-row"><a class="btn js-back" href="index.html#projects">← Back to projects</a></div>
+      </article>
+
+      <!-- Shown if someone opens project.html with no project, or a wrong link. Don't edit. -->
+      <div id="project-missing" hidden>
+        <h1>Project not found</h1>
+        <p class="lead">That project page doesn't exist yet.</p>
+        <a class="btn btn-primary js-back" href="index.html#projects">← Back to projects</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Harry Childs. Built by hand with HTML, CSS and JavaScript.
+    </div>
+  </footer>
+
+  <!-- DON'T EDIT: Pop-up that shows an image full size -->
+  <dialog id="lightbox" class="lightbox" aria-label="Image preview">
+    <button class="lightbox-close" aria-label="Close preview">×</button>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </dialog>
+
+  <script src="project.js"></script>
+</body>
+</html>
