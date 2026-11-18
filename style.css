@@ -1413,3 +1413,28 @@ h2::after {
   .edu-count { display: none; }
   .edu-body { padding: 0 18px 12px; }
 }
+
+/* =====================================================
+   GREEN "ASPIRING" LABEL, matching the LinkedIn banner (keep at the very bottom)
+   ===================================================== */
+.aspiring {
+  display: inline-block;
+  margin: 0.1em 0 0.05em;
+  font-size: 0.38em;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #16a34a;
+}
+:root[data-theme="dark"] .aspiring { color: #4ade80; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .aspiring { color: #4ade80; }
+}
+
+/* Tighten the gap around the green "ASPIRING" label (keep at the very bottom) */
+.hero h1 .aspiring {
+  display: block;
+  line-height: 2;
+  margin: 2px 0 6px;
+}
+.hero h1 .aspiring + br { display: none; }  /* removes the extra blank line after it */
